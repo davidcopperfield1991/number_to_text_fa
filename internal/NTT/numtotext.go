@@ -94,18 +94,18 @@ func seraghami(i int) string {
 	return list[array[0]-1] + Va + doraghami(dahgan)
 }
 
-func render(i int) string {
-	if i > 0 && i < 10 {
-		return yekraghami(i)
-	}
-	if i > 9 && i < 100 {
-		return doraghami(i)
-	}
-	if i > 99 && i < 1000 {
-		return seraghami(i)
-	}
-	return ""
-}
+// func render(i int) string {
+// 	if i > 0 && i < 10 {
+// 		return yekraghami(i)
+// 	}
+// 	if i > 9 && i < 100 {
+// 		return doraghami(i)
+// 	}
+// 	if i > 99 && i < 1000 {
+// 		return seraghami(i)
+// 	}
+// 	return ""
+// }
 
 func hezaregan(i int) string {
 	l := chandragham(i)
