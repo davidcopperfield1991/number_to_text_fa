@@ -15,6 +15,7 @@ func chandragham(i int) int {
 		l = l / 10
 		count++
 	}
+	fmt.Println(count)
 	return count
 }
 
@@ -27,6 +28,7 @@ func makearray(i int) []int {
 		j, _ := strconv.Atoi(i)
 		addadint = append(addadint, j)
 	}
+	// fmt.Println(addadint)
 
 	return addadint
 
@@ -37,7 +39,7 @@ func yekraghami(i int) string {
 		fmt.Println("addad eshtebah")
 	}
 	list := [10]string{"صفر", "یک", "دو", "سه", "چهار", "پنج", "شش", "هفت", "هشت", "نه"}
-
+	// fmt.Println(list[i])
 	return list[i]
 }
 
@@ -52,13 +54,14 @@ func doraghami(i int) string {
 		fmt.Println("dadash do raghami balad nisti?")
 	}
 	if i < 20 {
-
+		fmt.Println(list[i-10])
 		return list[i-10]
 	}
 
 	if i > 20 || i < 100 {
 
 		if array[1] == 0 {
+			fmt.Println("dastan")
 			return list2[array[0]-2]
 		}
 
@@ -70,12 +73,14 @@ func doraghami(i int) string {
 
 func seraghami(i int) string {
 	list := [9]string{"یکصد", "دویست", "سیصد", "چهارصد", "پانصد", "ششصد", "هفتصد", "هشتصد", "نهصد"}
-	va := " و "
+
 	if i < 100 || i > 999 {
 		fmt.Println("adad eshtebah hastesh")
 	}
 	array := makearray(i)
 	dahgan := i % 100
+	fmt.Println("se raghami ro bebin :")
+	fmt.Println(list[array[0]-1])
 
 	if dahgan == 0 {
 		return list[array[0]-1]
@@ -83,10 +88,10 @@ func seraghami(i int) string {
 
 	if dahgan < 10 {
 		yekraghami(dahgan)
-		return yekraghami(dahgan)
+		return list[array[0]-1] + Va + yekraghami(dahgan)
 	}
 
-	return list[array[0]-1] + va + doraghami(dahgan)
+	return list[array[0]-1] + Va + doraghami(dahgan)
 }
 
 func render(i int) string {
@@ -178,7 +183,7 @@ func billions(i int) string {
 
 func dana(i int) string {
 	l := chandragham(i)
-	// fmt.Println(l)
+	fmt.Println(l)
 	if l == 0 {
 		return ""
 	}

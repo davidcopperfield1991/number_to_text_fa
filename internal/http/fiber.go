@@ -25,6 +25,6 @@ func numtotext(c *fiber.Ctx) error {
 	var num Number
 	c.BodyParser(&num)
 	l := ntt.Call(num.Num)
-	fmt.Println(ntt.Call(225))
+	fmt.Println(ntt.Call(num.Num))
 	return c.JSON(l)
 }
